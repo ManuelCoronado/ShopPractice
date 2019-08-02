@@ -19,15 +19,18 @@ public class ArticleManager implements Manageable{
 		for (Article article : warehouse.getArticles()) {
 			if (article.equals(null)) {
 				article = newArticle;
+				break;
 			}
 		}
 		
 	}
 	@Override
-	public void deleteArticle(Article deleteArticle) {
+	//Check items by id /Add id to articles
+	public void deleteArticle(int id) {
 		for (Article article : warehouse.getArticles()) {
-
-			if (article.equals(deleteArticle)) {
+			
+			int articleId = article.getId();
+			if (articleId == id) {
 				article = null;
 			}
 		}
@@ -42,8 +45,10 @@ public class ArticleManager implements Manageable{
 	public void listArticles() {
 		//TODO call string methods for each article in the warehouse
 		for (Article article : warehouse.getArticles()) {
-			article.toString();
+			if (!article.equals(null)) {
+				article.toString();
 			}
+		}
 	}
 	
 	

@@ -12,9 +12,9 @@ public class Food extends Article{
 	}
 	
 	public Food(String name, String description, double price, double tax, String provider, int stock,
-			String category, Date expirationDate, String allergens) {
+			String category, Date expirationDate, String allergens, int id) {
 		
-		super(name, description, price, tax, provider, stock, category);
+		super(name, description, price, tax, provider, stock, category, id);
 		this.expirationDate = expirationDate;
 		this.allergens = allergens;
 	}

@@ -10,9 +10,9 @@ public class Technologic extends Article{
 	}	
 	
 	public Technologic(String name, String description, double price, double tax, String provider, int stock,
-			String category, String battery, String guarantee) {
+			String category, String battery, String guarantee, int id) {
 		
-		super(name, description, price, tax, provider, stock, category);
+		super(name, description, price, tax, provider, stock, category, id);
 		this.battery = battery;
 		this.guarantee = guarantee;
 	}

@@ -10,8 +10,9 @@ public class Fabrics extends Article{
 	}
 	
 	public Fabrics(String name, String description, double price, double tax, String provider, int stock,
-			String category, String material, String color, String size) {
-		super(name, description, price, tax, provider, stock, category);
+			String category, String material, String color, String size, int id) {
+		
+		super(name, description, price, tax, provider, stock, category, id);
 		this.material = material;
 		this.color = color;
 		this.size = size;

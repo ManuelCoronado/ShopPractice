@@ -1,6 +1,7 @@
 package com.es.EOI.shopzone.utils;
 
 import com.es.EOI.shopzone.entities.*;
+import com.es.EOI.shopzone.*;
 
 public class ArticleFactory {
 	public static Article getArticle(String category) {
@@ -21,6 +22,8 @@ public class ArticleFactory {
 		default:
 			break;
 		}
+		
+		MainClass.manager.addArticle(article);
 		
 		return article;
 	}

@@ -8,13 +8,14 @@ public abstract class Article {
 	public String provider;
 	public int stock;
 	public String category;
+	public int id;
 	
 	public Article() {
 		
 	}
 	
 	public Article(String name, String description, double price, double tax, 
-			String provider, int stock, String category) {
+			String provider, int stock, String category, int id) {
 		this.name = name;
 		this.description = description;
 		this.price = price;
@@ -22,6 +23,15 @@ public abstract class Article {
 		this.provider = provider;
 		this.stock = stock;
 		this.category = category;
+		this.id = id;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getName() {
